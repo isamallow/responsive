@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 
+/* 1 rem = 16px */
 :root {
-  /* 1 rem = 16px */
   font-size: 62.5%; /* 16 * 0,625 = 10px */
 }
 
@@ -68,10 +68,51 @@ ul li {
   gap: 3.8rem;
 }
 
+/* pega todo li que tenha anterior a ele um li */
+ul li + li {
+  margin-top: 3.2rem;
+}
+
 ul li span {
   font-weight: 800;
   font-size: 7.2rem;
   line-height: 8.0rem;
   letter-spacing: -2px;
   color: #090039;
+}
+
+ul li:first-child span {
+  margin-right: 1.2rem;
+}
+
+/* media queries */
+
+/* de 500px pra cima quero adicionar isso ao body */
+/* @media (min-width: 500px) {
+  body {
+    background-color: black;
+  }
+} */
+
+@media (min-width: 700px) {
+  body {
+    padding: 8rem;
+  }
+
+  main {
+    max-width: 1020px;
+    display: flex;
+    gap: 10rem;
+  }
+
+/* primeiro nível de div */
+  main > div {
+    max-width: 484px;
+  }
+
+  ul li {
+    gap: 5.3rem;
+    max-width: 450px;
+    align-items: center;
+  }
 }
